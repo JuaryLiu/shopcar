@@ -1,0 +1,267 @@
+/* 清除默认样式的代码 */
+/* 去除常见标签默认的 margin 和 padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+/* 內减模式 */
+* {
+  box-sizing: border-box;
+}
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  vertical-align: middle;
+}
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+/* 左浮动 */
+.fl {
+  float: left;
+}
+/* 右浮动 */
+.fr {
+  float: right;
+}
+/* 双伪元素清除法 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate {
+  animation: animate 1s ease-in-out;
+}
+.active i {
+  opacity: 1 !important;
+}
+.active span {
+  opacity: 1 !important;
+}
+.show {
+  background: green !important;
+}
+.show i {
+  opacity: 1 !important;
+}
+.show span {
+  opacity: 0 !important;
+}
+.add-to-car {
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  transition: 0.6s linear;
+  z-index: 1;
+}
+.add-to-car i {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #4a90e1;
+  transition: 0.6s cubic-bezier(0.5, -0.5, 1, 1);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .menu {
+  width: 150px;
+  background-color: #f40;
+}
+.container .goods-list {
+  margin: 0 10px;
+  flex: 1;
+}
+.container .goods-list .goods-item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: pink;
+}
+.container .goods-list .goods-item img {
+  width: 80px;
+  height: 80px;
+  background-color: #000;
+  margin: 0 10px;
+}
+.container .goods-list .goods-item .goods-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .goods-list .goods-item .goods-info goods-title {
+  font-weight: 400;
+}
+.container .goods-list .goods-item .goods-info .goods-desc {
+  font-size: 14px;
+  color: antiquewhite;
+}
+.container .goods-list .goods-item .goods-info .goods-sell {
+  font-size: 12px;
+  color: beige;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #f40;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm .goods-price .goods-price-unit {
+  font-size: 12px;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm .goods-btns i {
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50%;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm .goods-btns .icon-jiahao1 {
+  background: #4a90e1;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm .goods-btns .icon-jianhao {
+  opacity: 0;
+  background: gray;
+}
+.container .goods-list .goods-item .goods-info .goods-confirm .goods-btns span {
+  color: #fff;
+  margin: 0 5px;
+  opacity: 0;
+}
+.footer {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.footer .footer-car-container {
+  display: flex;
+}
+.footer .footer-car-container .active {
+  background-color: #4a90e1 !important;
+}
+.footer .footer-car-container .active .footer-car-num {
+  opacity: 1;
+}
+.footer .footer-car-container .footer-car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: -10px;
+  background: pink;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #000;
+}
+.footer .footer-car-container .footer-car i {
+  font-size: 25px ;
+}
+.footer .footer-car-container .footer-car .footer-car-num {
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #f40;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  line-height: 20px;
+  font-size: 12px ;
+}
+.footer .footer-car-container .footer-car-right {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-pay {
+  padding: 10px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+}
+.footer .footer-pay i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.footer .footer-pay span {
+  opacity: 1;
+}

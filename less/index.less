@@ -1,0 +1,207 @@
+@import 'base';
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    };
+    25% {
+        transform: scale(0.8);
+    };
+    50% {
+        transform: scale(1.1);
+    };
+    75% {
+        transform: scale(0.9);
+    };
+    100% {
+        transform: scale(1);
+    }
+}
+.animate {
+    animation: animate 1s ease-in-out;
+}
+.active {
+    
+    i {
+        opacity: 1 !important;
+    }
+    span {
+        opacity: 1 !important;
+    }
+}
+.show {
+    background: green !important;
+    i {
+        opacity: 1 !important;
+    }
+    span {
+        opacity: 0 !important;
+    }
+}
+
+.add-to-car {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align:center;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    transition:  .6s linear;
+    z-index: 1;
+    i {
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #4a90e1;
+        transition: .6s cubic-bezier(0.5,-0.5,1,1);
+    }
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    .menu {
+        width: 150px;
+        background-color: #f40;
+    }
+    .goods-list {
+        margin: 0 10px;
+        flex: 1;
+        .goods-item {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background-color: pink;
+            img {
+                width: 80px;
+                height: 80px;
+                background-color: #000;
+                margin: 0 10px;
+            }
+            .goods-info {
+                white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    goods-title {
+                        font-weight: 400;
+                    }
+                .goods-desc {
+                    font-size: 14px;
+                    color: antiquewhite;
+                }
+                .goods-sell {
+                    font-size: 12px;
+                    color: beige;
+                }
+                .goods-confirm {
+                    padding: 0 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #f40;
+                    .goods-price {
+                        .goods-price-unit {
+                            font-size: 12px;
+                        }
+                    }
+                    .goods-btns {
+                        i {
+                            font-weight: 700;
+                            color: #fff;
+                            border-radius: 50%;
+                        }
+                        .icon-jiahao1 {
+                            background: #4a90e1;
+                        }
+                        .icon-jianhao {
+                            opacity: 0;
+                            background: gray;
+                        }
+                        span {
+                            color: #fff;
+                            margin: 0 5px;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    .footer-car-container {
+        display: flex;
+        .active {
+            background-color: #4a90e1 !important;
+            .footer-car-num {
+                opacity: 1;
+            }
+        }
+       
+        .footer-car {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            margin-top: -10px;
+            background: pink;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            border: 2px solid #000;
+            i {
+                font-size: 25px ;
+            }
+            .footer-car-num  {
+                display: block;
+                position: absolute;
+                top: -2px;
+                right: 5px;
+                width: 20px;
+                height: 20px;
+                background-color: #f40;
+                border-radius: 50%;
+                text-align: center;
+                opacity: 0;
+                line-height: 20px;
+                font-size:12px ;
+            }
+        }
+        .footer-car-right {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .footer-pay {
+        padding: 10px;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        i {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        span {
+            opacity: 1;
+        }
+    }
+}
